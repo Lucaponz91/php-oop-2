@@ -20,8 +20,10 @@ class Product {
         // $this->brand = $param['brand'];
         // $this->categories = $param['categories'];
         $this->price = $param['price'];
+        $this->quantity = $param['quantity'];
     }
     public function setPrice($price){
+        
 
     }
 
