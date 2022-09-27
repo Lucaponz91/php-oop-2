@@ -1,5 +1,7 @@
 <?php
 include_once __DIR__ . '/app/PetFood.php';
+include_once __DIR__ . '/app/Kennel.php';
+include_once __DIR__ . '/app/Toy.php';
 
 $data = [
     "name" => "Crocchette di manzo",

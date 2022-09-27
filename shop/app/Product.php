@@ -13,12 +13,12 @@ class Product {
     function __construct($param)
     {
         $this->name = $param['name'];        
-        $this->poster = $param['poster'];
+        // $this->poster = $param['poster'];
         $this->description = $param['description'];
         $this->weight = $param['weight'];
-        $this->volume = $param['volume'];
-        $this->brand = $param['brand'];
-        $this->categories = $param['categories'];
+        // $this->volume = $param['volume'];
+        // $this->brand = $param['brand'];
+        // $this->categories = $param['categories'];
         $this->price = $param['price'];
     }
     public function setPrice($price){
