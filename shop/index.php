@@ -8,6 +8,8 @@ $data = [
     "description" => "Le migliori crocchette sulla piazza",
     "price" => 19.99,
     "weight" => 12,
+    "mainIngredient" => "Meat",
+    "flavour" => "Ham",
 ];
 
 $crocchette = new PetFood($data);

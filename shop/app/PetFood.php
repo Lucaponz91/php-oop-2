@@ -4,4 +4,10 @@ class PetFood extends Product{
     public $mainIngredient;
     public $flavour;
 
+    function __construct($mainIngredient, $flavour)
+    {
+        $this->mainIngredient = $mainIngredient;
+        $this->flavour = $flavour;
+    }
+
 }
