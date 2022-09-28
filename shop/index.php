@@ -12,10 +12,10 @@ include_once __DIR__ . '/Cart.php';
 //     "quantity"=> 2,
 // ];
 
-$crocchette = new PetFood('Crocchette di manzo', 19, 'Monge', 'food', 2, 'meat', 'ham');
-var_dump($crocchette);
-$pupazzo = new Toy('Orsetto', 7, 'Animal &Co', 'toy', 1, 'rubber');
-$cuccia = new Kennel('Cuccia King Size', 30, 'Animalando', 'doghouse', 1,'King-Size');
+// $crocchette = new PetFood('Crocchette di manzo', 19, 'Monge', 'food', 2, 'meat', 'ham');
+// var_dump($crocchette);
+// $pupazzo = new Toy('Orsetto', 7, 'Animal &Co', 'toy', 1, 'rubber');
+// $cuccia = new Kennel('Cuccia King Size', 30, 'Animalando', 'doghouse', 1,'King-Size');
 
 ?>
 
@@ -28,18 +28,18 @@ $cuccia = new Kennel('Cuccia King Size', 30, 'Animalando', 'doghouse', 1,'King-S
     <title>Boolanimals</title>
 </head>
 <body>
-<?=
- "Hai inserito nel carrello " . $crocchette-> quantity . " " . $crocchette->name . " . Il subtotale è di "  ?> <?= $crocchette->setPrice() . " euro. <br>"
-?>
-<?=
- " Hai inserito nel carrello " . $pupazzo-> quantity . " " . $pupazzo->name . " . Il subtotale è di "  ?> <?= $pupazzo-> setPrice() . " euro. <br>"
-?>
-<?=
- " Hai inserito nel carrello " . $cuccia-> quantity . " " . $cuccia->name . " . Il subtotale è di "  ?> <?= $cuccia-> setPrice() . " euro. <br>"
-?>
 
-<?= "Il totale è di $total euro." 
-?>
-    
+    <h1>Il tuo Carrello:</h1>
+    <ul>
+          <?php foreach($cart as $key=>$value){
+            echo "<li> Hai inserito nel carrello " . $value-> quantity . " " . $value->name . " . Il subtotale è di "  ?> <?= $value->setPrice() . " euro. </li><br>";
+
+        }
+            ?>
+            <h3>Il totale da saldare è di <?= $total ?> euro</h3>
+
+        
+    </ul>
+
 </body>
 </html>
