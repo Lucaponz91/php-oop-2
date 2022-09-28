@@ -1,8 +1,9 @@
 <?php
-include_once __DIR__ . '/app/PetFood.php';
-include_once __DIR__ . '/app/Kennel.php';
-include_once __DIR__ . '/app/Toy.php';
+include_once __DIR__ . '/classes/PetFood.php';
+include_once __DIR__ . '/classes/Kennel.php';
+include_once __DIR__ . '/classes/Toy.php';
 include_once __DIR__ . '/Cart.php';
+include_once __DIR__ . '/classes/User.php';
 
 // $data = [
 //     "name" => "Crocchette di manzo",

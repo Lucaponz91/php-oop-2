@@ -1,8 +1,8 @@
 <?php
-include_once __DIR__ . '/app/Kennel.php';
-include_once __DIR__ . '/app/PetFood.php';
-include_once __DIR__ . '/app/Product.php';
-include_once __DIR__ . '/app/Toy.php';
+include_once __DIR__ . '/classes/Kennel.php';
+include_once __DIR__ . '/classes/PetFood.php';
+include_once __DIR__ . '/classes/Product.php';
+include_once __DIR__ . '/classes/Toy.php';
 
 $cart = [
     new PetFood('Crocchette di manzo', 19, 'Monge', 'food', 2, 'meat', 'ham'),
