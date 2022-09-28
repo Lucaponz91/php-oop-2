@@ -21,7 +21,7 @@ class Product {
     }
     public function setPrice(){
         $subtotal = $this->price * $this->quantity;
-        echo $subtotal;
+        return $subtotal;
 
     }
 
