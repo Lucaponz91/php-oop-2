@@ -20,8 +20,13 @@ class Product {
         $this->quantity = $quantity;
     }
     public function setPrice(){
-        $subtotal = $this->price * $this->quantity;
-        return $subtotal;
+        if(!empty($this->price) || $this->quantity != 0) {
+            $subtotal = $this->price * $this->quantity;
+            return $subtotal;
+        } else {
+            throw new Exception('Deve essere indicato un prezzo e una quantità');
+        }
+        
 
     }
 

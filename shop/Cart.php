@@ -13,7 +13,7 @@ $cart = [
 
 $total = 0;
 foreach($cart as $key=>$value){
-    if(!empty($value->price))
+    if(!empty($value->price) || $value->quantity != 0)
        $total += ($value->price * $value->quantity);
        var_dump($total);
 }

@@ -32,10 +32,17 @@ include_once __DIR__ . '/Cart.php';
     <h1>Il tuo Carrello:</h1>
     <ul>
           <?php foreach($cart as $key=>$value){
-            echo "<li> Hai inserito nel carrello " . $value-> quantity . " " . $value->name . " . Il subtotale è di "  ?> <?= $value->setPrice() . " euro. </li><br>";
+            echo "<li> Hai inserito nel carrello " . $value-> quantity . " " . $value->name . " . Il subtotale è di "  ?> 
+            <?php 
+            try{ 
+                echo $value->setPrice();
+            } catch(Exception $e) {
+                var_dump($e);
+            }?>
+             <?=  " euro. </li><br>";
 
-        }
-            ?>
+        }?>
+            
             <h3>Il totale da saldare è di <?= $total ?> euro</h3>
 
         
